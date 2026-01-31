@@ -1,0 +1,27 @@
+sum ← 0
+
+FOR i ← 0 TO n-1
+    found ← false
+    FOR j ← 0 TO m-1
+        IF A[i] = B[j] THEN
+            found ← true
+        ENDIF
+    ENDFOR
+    IF found = false THEN
+        sum ← sum + A[i]
+    ENDIF
+ENDFOR
+
+FOR i ← 0 TO m-1
+    found ← false
+    FOR j ← 0 TO n-1
+        IF B[i] = A[j] THEN
+            found ← true
+        ENDIF
+    ENDFOR
+    IF found = false THEN
+        sum ← sum + B[i]
+    ENDIF
+ENDFOR
+
+PRINT sum

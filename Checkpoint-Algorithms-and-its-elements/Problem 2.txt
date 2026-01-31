@@ -1,0 +1,19 @@
+PROCEDURE dot_product(v1, v2, n, ps)
+    ps ← 0
+    FOR i ← 0 TO n-1
+        ps ← ps + (v1[i] * v2[i])
+    ENDFOR
+ENDPROCEDURE
+FOR k ← 1 TO number_of_pairs
+    READ n
+    READ vector v1[0..n-1]
+    READ vector v2[0..n-1]
+
+    CALL dot_product(v1, v2, n, ps)
+
+    IF ps = 0 THEN
+        PRINT "Vectors are orthogonal"
+    ELSE
+        PRINT "Vectors are not orthogonal"
+    ENDIF
+ENDFOR
